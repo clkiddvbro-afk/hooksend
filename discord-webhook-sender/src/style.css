@@ -19,3 +19,10 @@ footer{display:flex;justify-content:space-between;padding:28px 0 34px;margin-top
 .spin{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:780px){.shell{padding:0 20px}.workspace{grid-template-columns:1fr}.hero{padding:48px 0 32px}.preview-column{margin-top:6px}.hero h1{letter-spacing:-2.5px}}
 @media(max-width:480px){.shell{padding:0 14px}.composer{padding:19px}.two-fields{grid-template-columns:1fr;gap:0}.top-right{font-size:8px}.hero h1{font-size:43px}.composer-footer{align-items:flex-start}.composer-footer .hint{max-width:65%}footer{font-size:8px}}
+
+.webhook-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.webhook-actions .hint{margin:8px 0 0}
+.delete-webhook{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:#281817;border:1px solid #57302e;color:#ff9b91;border-radius:7px;padding:7px 9px;font-size:10px;cursor:pointer;transition:background .2s,border-color .2s}
+.delete-webhook:hover:not(:disabled){background:#3a201f;border-color:#81423e}
+.delete-webhook:disabled{opacity:.35;cursor:not-allowed}
+@media(max-width:480px){.webhook-actions{align-items:flex-start;flex-direction:column}.webhook-actions .hint{max-width:100%}}

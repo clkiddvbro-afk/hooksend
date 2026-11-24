@@ -105,7 +105,10 @@ function App() {
             <input id="webhook" type={showWebhook ? "text" : "password"} placeholder="https://discord.com/api/webhooks/..." value={webhook} onChange={e => {setWebhook(e.target.value); setStatus(null);}} autoComplete="off" spellCheck="false" />
             <button className="icon-button" type="button" onClick={() => setShowWebhook(v => !v)} aria-label={showWebhook ? "Hide webhook" : "Show webhook"}>{showWebhook ? <EyeOff size={16}/> : <Eye size={16}/>}</button>
           </div>
-          <p className="hint"><ShieldCheck size={13}/> Your webhook URL stays in this browser session. Don't share it.</p>
+          <div className="webhook-actions">
+            <p className="hint"><ShieldCheck size={13}/> Your webhook URL stays in this browser session. Don't share it.</p>
+            <button className="delete-webhook" type="button" onClick={() => {setWebhook(""); setStatus(null);}} disabled={!webhook.trim()}><Eraser size={13}/> Delete webhook</button>
+          </div>
 
           <div className="two-fields">
             <div>
